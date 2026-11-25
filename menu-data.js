@@ -19,7 +19,7 @@ const MENU = [
         I("Yoghurt & granola", "griekse yoghurt · seizoensfruit · granola · honing", "greek yoghurt · seasonal fruit · granola · honey", 8.5, "V"),
       ]},
       { t: { nl: "Ei specials", en: "Egg specials" }, note: { nl: "geserveerd op bruin zuurdesembrood", en: "served on brown sourdough bread" }, items: [
-        I("Roerei · spiegelei · omelet", "extra kaas +2,5 · sucuk +3,5 · spinazie +2 · tomaat +2 · ham +2,5 · bacon +3 (ham & bacon niet halal)", "add cheese +2.5 · sucuk +3.5 · spinach +2 · tomato +2 · ham +2.5 · crispy bacon +3 (ham & bacon not halal)", 8.5, "V", "Scrambled · fried · omelet"),
+        I("Roerei · spiegelei · omelet", "extra kaas +2,5 · sucuk +3,5 · spinazie +2 · tomaat +2 · ham* +2,5 · bacon* +3", "add cheese +2.5 · sucuk +3.5 · spinach +2 · tomato +2 · ham* +2.5 · crispy bacon* +3", 8.5, "V", "Scrambled · fried · omelet"),
         I("Shakshuka", "spicy tomatensaus · gepocheerd ei · ui · geroosterde paprika · knoflook", "spicy tomato sauce · poached egg · roasted bell pepper · garlic · onion", 12),
         I("Menemen", "roerei · tomaat · verse kruiden · groene paprika · extra sucuk +3,5 · feta +2,5", "scrambled egg · tomato · herbs · green bell pepper · add sucuk +3.5 · feta +2.5", 12),
       ]},
@@ -28,7 +28,7 @@ const MENU = [
         I("Truffelkroketten", "2 truffel-paddenstoelenkroketten · truffelmayo", "2 truffle-mushroom croquettes · truffle mayonnaise", 11.5, "V", "Truffle croquettes"),
         I("Carpaccio", "rundvlees · truffel · parmezaan · rucola · pijnboompitten", "thinly sliced beef · truffle · parmesan · rucola · pine nuts", 14),
         I("Crispy humus", "gegrilde groenten · humus · gezuurde rode kool · krokante paddenstoelen", "grilled vegetables · humus · crispy mushrooms · pickled red cabbage", 12.5, "VN"),
-        I("Smashed avocado", "tomaat · rode ui · avocado · citroen · chilivlokken · extra kip +4 · zalm +4 · ei +2,5 · bacon +3 (niet halal)", "tomato · red onion · avocado · lemon · chili flakes · add chicken +4 · smoked salmon +4 · fried egg +2.5 · bacon +3 (not halal)", 12, "VN"),
+        I("Smashed avocado", "tomaat · rode ui · avocado · citroen · chilivlokken · extra kip +4 · zalm +4 · ei +2,5 · bacon* +3", "tomato · red onion · avocado · lemon · chili flakes · add chicken +4 · smoked salmon +4 · fried egg +2.5 · bacon* +3", 12, "VN"),
         I("BLTC", "gegrilde kip · bacon · sla · tomaat · kaas · honing-mosterdsaus · extra friet +3 · truffelfriet +4,5", "grilled chicken · bacon · lettuce · tomato · cheese · honey-mustard sauce · add fries +3 · truffle fries +4.5", 14, "NH"),
         I("Balık ekmek", "gegrilde zeebaars · sla · rode ui · citroen · peterselie · op huisgemaakt turks brood", "grilled sea bass · lettuce · red onion · lemon · parsley · on homemade turkish bread", 16),
       ]},
