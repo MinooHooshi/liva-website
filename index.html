@@ -196,6 +196,8 @@ summary::-webkit-details-marker{display:none}
 .item .single{font-family:var(--sans);font-size:16px;color:var(--plum);font-weight:500;white-space:nowrap}
 .item .desc{font-size:14.5px;color:var(--muted);margin-top:2px;max-width:92%}
 .tag{display:inline-block;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.1em;padding:2px 7px;border-radius:999px;border:1px solid #7b9a5a;color:#5d7d3f;vertical-align:middle;margin-left:6px;position:relative;top:-2px}
+.tag.nh{border-color:#b98a6a;color:#9a6a4a;letter-spacing:.04em;text-transform:lowercase}
+.legend .halal{display:inline-block;margin-top:8px}
 .tag.vn{background:#5d7d3f;color:#fff;border-color:#5d7d3f}
 .allergy{margin-top:20px;padding:22px 26px;border-radius:var(--radius);background:var(--cream-2);display:flex;gap:16px;align-items:center;font-size:15px;color:var(--muted)}
 .allergy svg{flex:none;width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.4}
@@ -431,7 +433,7 @@ footer{background:var(--plum-night);color:#cbb8c5;padding:80px 0 40px}
         <div class="eyebrow" data-i18n="menu_eyebrow">Eten & drinken</div>
         <h2 data-i18n="menu_title">Ons <em>menu</em></h2>
       </div>
-      <div class="legend"><span class="tag">V</span> <span data-i18n="veg">vegetarisch</span> &nbsp; <span class="tag vn">VN</span> <span data-i18n="vegan">veganistisch</span></div>
+      <div class="legend"><span class="tag">V</span> <span data-i18n="veg">vegetarisch</span> &nbsp; <span class="tag vn">VN</span> <span data-i18n="vegan">veganistisch</span><br><span class="halal" data-i18n="halal">Al ons vlees is halal, behalve gerechten gemarkeerd met <span class='tag nh'>niet halal</span></span></div>
     </div>
     <div class="tabs" id="tabs" role="tablist"></div>
     <p class="menu-intro" id="menuIntro"></p>
@@ -606,7 +608,7 @@ const T = {
     dp1_time:"Vanaf 10:00 · weekend 09:00", dp1_t:"Ontbijt & lunch", dp1_d:"LIVA breakfast, Turks ontbijt, shakshuka, flatbreads en verse sandwiches op zuurdesem. Met een flat white of iced matcha erbij.",
     dp2_time:"De hele middag & avond", dp2_t:"Meze & borrel", dp2_d:"Proeverijen en rakı meze, bitterballen en calamares. Met een spritz, huisgemaakte limonade of speciaalbier van de tap.",
     dp3_time:"Keuken tot 21:00 · vr–za 22:00", dp3_t:"Diner", dp3_d:"Van de grill, uit de oven en uit onze pasta club. Begin met meze om te delen, sluit af met huisgemaakte baklava.",
-    menu_eyebrow:"Eten & drinken", menu_title:"Ons <em>menu</em>", veg:"vegetarisch", vegan:"veganistisch",
+    menu_eyebrow:"Eten & drinken", menu_title:"Ons <em>menu</em>", veg:"vegetarisch", vegan:"veganistisch", nh:"niet halal", halal:"Al ons vlees is halal, behalve gerechten gemarkeerd met <span class='tag nh'>niet halal</span>",
     allergy:"Heb je een allergie of dieetwens? Laat het ons weten, dan denken we graag met je mee. Prijzen in euro's.",
     g_eyebrow:"Groepen & events", g_title:"Samen aan <em>lange tafels</em>",
     g_lead:"Kom je met meer dan 12 personen? Dan maken we er samen iets bijzonders van, of het nu gaat om een zakelijke lunch of een verjaardag die niemand vergeet.",
@@ -642,7 +644,7 @@ const T = {
     dp1_time:"From 10:00 · weekends 09:00", dp1_t:"Breakfast & lunch", dp1_d:"LIVA breakfast, Turkish breakfast, shakshuka, flatbreads and fresh sourdough sandwiches. With a flat white or an iced matcha on the side.",
     dp2_time:"All afternoon & evening", dp2_t:"Meze & snacks", dp2_d:"Tasting platters and rakı meze, bitterballen and calamari. With a spritz, homemade lemonade or craft beer on tap.",
     dp3_time:"Kitchen until 21:00 · Fri–Sat 22:00", dp3_t:"Dinner", dp3_d:"From the grill, from the oven and from our pasta club. Start with meze to share, finish with homemade baklava.",
-    menu_eyebrow:"Food & drinks", menu_title:"Our <em>menu</em>", veg:"vegetarian", vegan:"vegan",
+    menu_eyebrow:"Food & drinks", menu_title:"Our <em>menu</em>", veg:"vegetarian", vegan:"vegan", nh:"not halal", halal:"All our meat is halal, except dishes marked <span class='tag nh'>not halal</span>",
     allergy:"Do you have an allergy or dietary requirement? Let us know and we'll gladly help. Prices in euros.",
     g_eyebrow:"Groups & events", g_title:"Together at <em>long tables</em>",
     g_lead:"Coming with more than 12 people? Let's make it something special together, whether it's a business lunch or a birthday nobody will forget.",
@@ -711,7 +713,7 @@ function renderHours(){
 
 function itemHTML(it, cols){
   const name = lang === "nl" ? it.n : it.ne, desc = lang === "nl" ? it.dn : it.de;
-  const tag = it.t ? `<span class="tag ${it.t==="VN"?"vn":""}">${it.t}</span>` : "";
+  const tag = !it.t ? "" : it.t === "NH" ? `<span class="tag nh">${T[lang].nh}</span>` : `<span class="tag ${it.t==="VN"?"vn":""}">${it.t}</span>`;
   const price = Array.isArray(it.p)
     ? `<span class="prices">${it.p.map(x=>`<span>${fmt(x)}</span>`).join("")}</span>`
     : `<span class="single">${fmt(it.p)}</span>`;

@@ -1,5 +1,5 @@
 /* LIVA – menu data. Edit prices and dishes here; the website updates automatically.
-   Item format: I(name, description NL, description EN, price, tag "V" | "VN" | "", name EN (optional))
+   Item format: I(name, description NL, description EN, price, tag "V" | "VN" | "NH" (not halal) | "", name EN (optional))
    A price can be a number, a text like "+1", or a list for several sizes, e.g. [5.5, 26.5] for glass / bottle.
    Section options: open: true  → open by default (currently all closed) · featured: true → highlighted (used for the grill). */
 const I = (n, dn, de, p, t, ne) => ({ n, ne: ne || n, dn: dn || "", de: de || dn || "", p, t: t || "" });
@@ -13,13 +13,13 @@ const MENU = [
     intro: { nl: "Een goed begin van de dag, en een lunch die je bijblijft.", en: "A great start to the day, and a lunch to remember." },
     sections: [
       { t: { nl: "Ontbijt bij LIVA", en: "Breakfast club" }, items: [
-        I("LIVA breakfast", "zuurdesembrood · gebakken ei · ham · kaas · yoghurt · croissant · jam · boter · jus d'orange", "sourdough bread · fried egg · ham · cheese · yoghurt · croissant · jam · butter · jus d'orange", 16.5),
+        I("LIVA breakfast", "zuurdesembrood · gebakken ei · ham · kaas · yoghurt · croissant · jam · boter · jus d'orange", "sourdough bread · fried egg · ham · cheese · yoghurt · croissant · jam · butter · jus d'orange", 16.5, "NH"),
         I("Turks ontbijt", "turks brood · tomaat · peterselie · feta · olijven · sucuk · gekookt ei · padrón pepers · komkommer", "homemade turkish bread · tomato · feta · olives · sucuk · boiled egg · padrón peppers · cucumber", 16.5, "", "Turkish breakfast"),
         I("Croissant", "dagelijks vers gebakken · jam · boter", "freshly baked daily · jam · butter", 4, "V"),
         I("Yoghurt & granola", "griekse yoghurt · seizoensfruit · granola · honing", "greek yoghurt · seasonal fruit · granola · honey", 8.5, "V"),
       ]},
       { t: { nl: "Ei specials", en: "Egg specials" }, note: { nl: "geserveerd op bruin zuurdesembrood", en: "served on brown sourdough bread" }, items: [
-        I("Roerei · spiegelei · omelet", "extra kaas +2,5 · sucuk +3,5 · spinazie +2 · tomaat +2 · ham +2,5 · bacon +3", "add cheese +2.5 · sucuk +3.5 · spinach +2 · tomato +2 · ham +2.5 · crispy bacon +3", 8.5, "V", "Scrambled · fried · omelet"),
+        I("Roerei · spiegelei · omelet", "extra kaas +2,5 · sucuk +3,5 · spinazie +2 · tomaat +2 · ham +2,5 · bacon +3 (ham & bacon niet halal)", "add cheese +2.5 · sucuk +3.5 · spinach +2 · tomato +2 · ham +2.5 · crispy bacon +3 (ham & bacon not halal)", 8.5, "V", "Scrambled · fried · omelet"),
         I("Shakshuka", "spicy tomatensaus · gepocheerd ei · ui · geroosterde paprika · knoflook", "spicy tomato sauce · poached egg · roasted bell pepper · garlic · onion", 12),
         I("Menemen", "roerei · tomaat · verse kruiden · groene paprika · extra sucuk +3,5 · feta +2,5", "scrambled egg · tomato · herbs · green bell pepper · add sucuk +3.5 · feta +2.5", 12),
       ]},
@@ -28,8 +28,8 @@ const MENU = [
         I("Truffelkroketten", "2 truffel-paddenstoelenkroketten · truffelmayo", "2 truffle-mushroom croquettes · truffle mayonnaise", 11.5, "V", "Truffle croquettes"),
         I("Carpaccio", "rundvlees · truffel · parmezaan · rucola · pijnboompitten", "thinly sliced beef · truffle · parmesan · rucola · pine nuts", 14),
         I("Crispy humus", "gegrilde groenten · humus · gezuurde rode kool · krokante paddenstoelen", "grilled vegetables · humus · crispy mushrooms · pickled red cabbage", 12.5, "VN"),
-        I("Smashed avocado", "tomaat · rode ui · avocado · citroen · chilivlokken · extra kip +4 · zalm +4 · ei +2,5 · bacon +3", "tomato · red onion · avocado · lemon · chili flakes · add chicken +4 · smoked salmon +4 · fried egg +2.5 · bacon +3", 12, "VN"),
-        I("BLTC", "gegrilde kip · bacon · sla · tomaat · kaas · honing-mosterdsaus · extra friet +3 · truffelfriet +4,5", "grilled chicken · bacon · lettuce · tomato · cheese · honey-mustard sauce · add fries +3 · truffle fries +4.5", 14),
+        I("Smashed avocado", "tomaat · rode ui · avocado · citroen · chilivlokken · extra kip +4 · zalm +4 · ei +2,5 · bacon +3 (niet halal)", "tomato · red onion · avocado · lemon · chili flakes · add chicken +4 · smoked salmon +4 · fried egg +2.5 · bacon +3 (not halal)", 12, "VN"),
+        I("BLTC", "gegrilde kip · bacon · sla · tomaat · kaas · honing-mosterdsaus · extra friet +3 · truffelfriet +4,5", "grilled chicken · bacon · lettuce · tomato · cheese · honey-mustard sauce · add fries +3 · truffle fries +4.5", 14, "NH"),
         I("Balık ekmek", "gegrilde zeebaars · sla · rode ui · citroen · peterselie · op huisgemaakt turks brood", "grilled sea bass · lettuce · red onion · lemon · parsley · on homemade turkish bread", 16),
       ]},
       { t: { nl: "Flatbread", en: "Flatbread" }, items: [
@@ -40,7 +40,7 @@ const MENU = [
       ]},
       { t: { nl: "Tosti's", en: "Toasties" }, note: { nl: "op huisgemaakt brood", en: "on homemade bread" }, items: [
         I("Kaas", "gele kaas · ketchup", "yellow cheese · ketchup", 7.5, "V", "Cheese"),
-        I("Ham", "ham · gele kaas · ketchup", "ham · yellow cheese · ketchup", 8.5),
+        I("Ham", "ham · gele kaas · ketchup", "ham · yellow cheese · ketchup", 8.5, "NH"),
         I("Salami", "sucuk · gele kaas · ketchup", "sucuk · yellow cheese · ketchup", 9),
         I("Pulled chicken", "langzaam gegaarde kip · cheddar · spicy liva saus", "slow-cooked chicken · cheddar · spicy liva sauce", 10),
       ]},
