@@ -1,7 +1,7 @@
 /* LIVA – menu data. Edit prices and dishes here; the website updates automatically.
    Item format: I(name, description NL, description EN, price, tag "V" | "VN" | "", name EN (optional))
    A price can be a number, a text like "+1", or a list for several sizes, e.g. [5.5, 26.5] for glass / bottle.
-   Section options: open: true  → open by default · featured: true → highlighted (used for the grill). */
+   Section options: open: true  → open by default (currently all closed) · featured: true → highlighted (used for the grill). */
 const I = (n, dn, de, p, t, ne) => ({ n, ne: ne || n, dn: dn || "", de: de || dn || "", p, t: t || "" });
 const GB = { nl: ["glas", "fles"], en: ["glass", "bottle"] };
 
@@ -12,7 +12,7 @@ const MENU = [
     label: { nl: "Ontbijt & lunch", en: "Breakfast & lunch" },
     intro: { nl: "Een goed begin van de dag, en een lunch die je bijblijft.", en: "A great start to the day, and a lunch to remember." },
     sections: [
-      { open: true, t: { nl: "Ontbijt bij LIVA", en: "Breakfast club" }, items: [
+      { t: { nl: "Ontbijt bij LIVA", en: "Breakfast club" }, items: [
         I("LIVA breakfast", "zuurdesembrood · gebakken ei · ham · kaas · yoghurt · croissant · jam · boter · jus d'orange", "sourdough bread · fried egg · ham · cheese · yoghurt · croissant · jam · butter · jus d'orange", 16.5),
         I("Turks ontbijt", "turks brood · tomaat · peterselie · feta · olijven · sucuk · gekookt ei · padrón pepers · komkommer", "homemade turkish bread · tomato · feta · olives · sucuk · boiled egg · padrón peppers · cucumber", 16.5, "", "Turkish breakfast"),
         I("Croissant", "dagelijks vers gebakken · jam · boter", "freshly baked daily · jam · butter", 4, "V"),
@@ -62,7 +62,7 @@ const MENU = [
     label: { nl: "Diner", en: "Dinner" },
     intro: { nl: "Van de grill, uit de oven, uit onze pasta club en meze om te delen.", en: "From the grill, from the oven, from our pasta club and meze to share." },
     sections: [
-      { open: true, featured: true, t: { nl: "Van de grill", en: "From the grill" }, note: { nl: "geserveerd met rijst en salade", en: "served with rice and salad" }, items: [
+      { featured: true, t: { nl: "Van de grill", en: "From the grill" }, note: { nl: "geserveerd met rijst en salade", en: "served with rice and salad" }, items: [
         I("LIVA grill", "köfte · kippendij · kipspies · lamskotelet", "köfte · chicken thighs · chicken skewers · lamb cutlet", 32.5),
         I("Köfte", "rundergehaktballen · mild gekruid", "beef meatballs · mildly spiced", 25),
         I("Kippendijen", "gemarineerde kippendijen · ui · verse kruiden", "marinated chicken thighs · onion · herbs", 25.5, "", "Chicken thighs"),
@@ -132,7 +132,7 @@ const MENU = [
     label: { nl: "Snacks", en: "Snacks" },
     intro: { nl: "Voor bij een koud biertje, een spritz of een glas wijn.", en: "Perfect with a cold beer, a spritz or a glass of wine." },
     sections: [
-      { open: true, t: { nl: "Warme bites", en: "Warm bites" }, items: [
+      { t: { nl: "Warme bites", en: "Warm bites" }, items: [
         I("Bitterballen", "rundvleesbitterballen · mosterd", "beef bitterballen · mustard", 8),
         I("Calamares", "krokante inktvisringen · aioli · citroen", "crispy squid rings · aioli · lemon", 11.5),
         I("Kaastengels", "oude kaas · sweet chilisaus", "aged cheese · sweet chili sauce", 8, "V", "Cheese rolls"),
@@ -162,7 +162,7 @@ const MENU = [
     label: { nl: "Desserts", en: "Desserts" },
     intro: { nl: "Een zoete afsluiter, of iets lekkers bij de koffie.", en: "A sweet finish, or something nice with your coffee." },
     sections: [
-      { open: true, t: { nl: "Desserts", en: "Desserts" }, items: [
+      { t: { nl: "Desserts", en: "Desserts" }, items: [
         I("Classic tiramisu", "koffie · lange vingers · mascarpone · cacao", "coffee · ladyfingers · mascarpone · cacao", 6.5),
         I("Dame blanche", "vanille-ijs · slagroom · chocoladesaus", "vanilla ice cream · whipped cream · chocolate sauce", 7.5),
         I("Affogato", "shotje espresso · pistachecrumble · vanille-ijs", "shot of espresso · pistachio crumble · vanilla ice cream", 7),
@@ -187,7 +187,7 @@ const MENU = [
     label: { nl: "LIVA Kids", en: "LIVA Kids" },
     intro: { nl: "Ons kindermenu, voor de kleine gasten.", en: "Our kids' menu, for our youngest guests." },
     sections: [
-      { open: true, t: { nl: "Lunch", en: "Lunch" }, items: [
+      { t: { nl: "Lunch", en: "Lunch" }, items: [
         I("Eitje", "met een bammetje · keuze uit: gebakken ei · omelet · roerei", "on toast · choose from: fried egg · omelet · scrambled", 5, "V", "Egg your way"),
         I("Kids tosti", "gele kaas · ketchup", "yellow cheese · ketchup", 5, "V", "Kids toastie"),
         I("Broodje kroket", "bammetje · runderkroket of truffelkroket", "slice of bread · beef or truffle croquette", 6, "", "Croquette on bread"),
@@ -214,7 +214,7 @@ const MENU = [
     label: { nl: "Drankjes", en: "Drinks" },
     intro: { nl: "Koffie, huisgemaakte limonades, cocktails, speciaalbier en natuurlijk rakı.", en: "Coffee, homemade lemonades, cocktails, craft beer and of course rakı." },
     sections: [
-      { open: true, t: { nl: "Koffie & thee", en: "Coffee & tea" }, groups: [
+      { t: { nl: "Koffie & thee", en: "Coffee & tea" }, groups: [
         { t: { nl: "Koffie", en: "Coffee" }, items: [
           I("Espresso", "", "", 3), I("Koffie", "", "", 3.5, "", "Coffee"), I("Doppio", "", "", 4),
           I("Espresso macchiato", "", "", 3.7), I("Cortado", "", "", 3.7), I("Flat white", "", "", 4.6),
@@ -343,7 +343,7 @@ const MENU = [
     label: { nl: "Wijnkaart", en: "Wine list" },
     intro: { nl: "Op glas of per fles, van Spanje tot Sicilië en Turkije.", en: "By the glass or by the bottle, from Spain to Sicily and Türkiye." },
     sections: [
-      { open: true, t: { nl: "Wijnen", en: "Wines" }, note: { nl: "per glas of per fles", en: "by the glass or by the bottle" }, groups: [
+      { t: { nl: "Wijnen", en: "Wines" }, note: { nl: "per glas of per fles", en: "by the glass or by the bottle" }, groups: [
         { t: { nl: "Wit", en: "White" }, cols: GB, items: [
           I("Verdejo", "El Convertido · Spanje", "El Convertido · Spain", [5.5, 26.5]),
           I("Sauvignon blanc", "Guillaman · Frankrijk", "Guillaman · France", [5.9, 28.5]),

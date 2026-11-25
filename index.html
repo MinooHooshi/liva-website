@@ -272,6 +272,7 @@ dialog.bk .x{position:absolute;right:14px;top:12px;background:none;border:0;font
 .getting div{display:flex;gap:14px;align-items:flex-start;background:var(--cream);border-radius:12px;padding:16px 18px}
 .getting .ic{flex:none;width:40px;height:40px;border-radius:50%;background:var(--plum);color:var(--gold-light);display:grid;place-items:center;font-weight:500;font-size:13px;letter-spacing:.05em}
 .getting b{display:block;font-weight:500;color:var(--ink)}
+.getting .maplink{display:block;font-size:14px;color:var(--plum);font-weight:500;text-decoration:none;margin-top:2px}
 .getting span{font-size:15px;color:var(--muted)}
 .map{margin-top:24px;border-radius:14px;overflow:hidden;height:280px;background:linear-gradient(135deg,var(--cream-2),#e5d6c0);display:grid;place-items:center}
 .map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) sepia(.15)}
@@ -548,7 +549,7 @@ footer{background:var(--plum-night);color:#cbb8c5;padding:80px 0 40px}
         <div class="getting">
           <div><span class="ic">7·13</span><p><b data-i18n="tram_t">Tram 7 & 13</b><span data-i18n="tram_d">Halte op 2 minuten lopen</span></p></div>
           <div><span class="ic">15·18</span><p><b data-i18n="bus_t">Bus 15 & 18</b><span data-i18n="bus_d">Halte op 2 minuten lopen</span></p></div>
-          <div><span class="ic">P</span><p><b data-i18n="park_t">Grote openbare parkeergarage</b><span data-i18n="park_d">Direct onder het Mercatorplein</span></p></div>
+          <div><span class="ic">P</span><p><b data-i18n="park_t">Parkeergarage Mercatorplein</b><span data-i18n="park_d">Grote openbare garage, direct onder het plein</span> <a class="maplink" href="https://maps.app.goo.gl/PQkTfqSeidfRL6jGA" target="_blank" rel="noopener" data-i18n="park_link">Bekijk op de kaart →</a></p></div>
         </div>
       </div>
     </div>
@@ -619,7 +620,7 @@ const T = {
     v_eyebrow:"Bezoek ons", v_title:"Tot <em>snel</em>", h_open:"Open", h_kitchen:"Keuken",
     h_longer:"We zijn vaak langer open. Bel gerust even om het te checken:", route:"Plan je route →",
     getting:"Bereikbaarheid", tram_t:"Tram 7 & 13", tram_d:"Halte op 2 minuten lopen", bus_t:"Bus 15 & 18", bus_d:"Halte op 2 minuten lopen",
-    park_t:"Grote openbare parkeergarage", park_d:"Direct onder het Mercatorplein",
+    park_t:"Parkeergarage Mercatorplein", park_d:"Grote openbare garage, direct onder het plein", park_link:"Bekijk op de kaart →",
     foot_tag:"Samen komen · delen · genieten", f_visit:"Adres", f_contact:"Contact", f_hours:"Openingstijden",
     f_hours_txt:"ma–do 10:00–23:00<br>vr 10:00–00:00<br>za 09:00–00:00<br>zo 09:00–23:00",
     days:["Zondag","Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag"],
@@ -655,7 +656,7 @@ const T = {
     v_eyebrow:"Visit us", v_title:"See you <em>soon</em>", h_open:"Open", h_kitchen:"Kitchen",
     h_longer:"We're often open later. Feel free to call and check:", route:"Get directions →",
     getting:"Getting here", tram_t:"Tram 7 & 13", tram_d:"Stop just 2 minutes' walk away", bus_t:"Bus 15 & 18", bus_d:"Stop just 2 minutes' walk away",
-    park_t:"Large public parking garage", park_d:"Right underneath Mercatorplein",
+    park_t:"Parkeergarage Mercatorplein", park_d:"Large public garage, right underneath the square", park_link:"View on map →",
     foot_tag:"Gather · share · enjoy", f_visit:"Address", f_contact:"Contact", f_hours:"Opening hours",
     f_hours_txt:"Mon–Thu 10:00–23:00<br>Fri 10:00–00:00<br>Sat 09:00–00:00<br>Sun 09:00–23:00",
     days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
