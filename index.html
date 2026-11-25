@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LIVA · Mediterranean Soul · Mercatorplein Amsterdam</title>
+<meta name="description" content="LIVA – Mediterraan café-restaurant aan het Mercatorplein in Amsterdam West. Ontbijt, lunch, meze, rakı, cocktails en diner. Reserveer online.">
+<link rel="canonical" href="https://cafeliva.nl/">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="LIVA · Mediterranean Soul">
+<meta property="og:description" content="Samen komen, delen, genieten. Mediterraan café-restaurant aan het Mercatorplein, Amsterdam.">
+<meta property="og:image" content="https://cafeliva.nl/img/og.jpg">
+<meta property="og:url" content="https://cafeliva.nl/">
+<meta name="theme-color" content="#2a0a24">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2370005a'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23d6aa52'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "LIVA – Mediterranean Soul",
+  "url": "https://cafeliva.nl/",
+  "image": "https://cafeliva.nl/img/og.jpg",
+  "telephone": "+31203583160",
+  "email": "info@cafeliva.nl",
+  "servesCuisine": ["Mediterranean", "Turkish", "Meze"],
+  "priceRange": "€€",
+  "acceptsReservations": "True",
+  "menu": "https://cafeliva.nl/#menu",
+  "address": {"@type": "PostalAddress", "streetAddress": "Mercatorplein 2b", "postalCode": "1057 CB", "addressLocality": "Amsterdam", "addressCountry": "NL"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "10:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "00:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "00:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "23:00"}
+  ],
+  "sameAs": ["https://www.instagram.com/cafeliva.amsterdam/"]
+}
+</script>
+
+<style>
+:root{
+  --plum:#70005a; --plum-deep:#2a0a24; --plum-night:#1c0718; --plum-soft:#8a2a74;
+  --gold:#a8822f; --gold-light:#d6aa52; --gold-pale:#ecd9ad;
+  --cream:#f7f1e8; --cream-2:#efe5d6; --ink:#2b1a26; --muted:#6f5d68;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Jost", "Helvetica Neue", Arial, sans-serif;
+  --max:1200px; --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.dark .eyebrow{color:var(--gold-light)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(40px,5.4vw,66px);color:var(--plum)}
+.dark h2{color:var(--cream)}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.dark h2 em,.dark h1 em{color:var(--gold-light)}
+.diamond{display:flex;align-items:center;gap:14px;color:var(--gold);margin:18px 0 22px;font-size:10px}
+.diamond:before,.diamond:after{content:"";height:1px;width:44px;background:currentColor;opacity:.6}
+.center{text-align:center}.center .diamond{justify-content:center}
+.lead{font-size:19px;color:var(--muted);max-width:620px}
+.dark .lead{color:#d9c8d3}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;border:1px solid transparent;font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:.25s ease}
+.btn-gold{background:var(--gold-light);color:var(--plum-night)}
+.btn-gold:hover{background:var(--gold-pale)}
+.btn-plum{background:var(--plum);color:var(--cream)}
+.btn-plum:hover{background:var(--plum-soft)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover{background:rgba(214,170,82,.12)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s, box-shadow .3s}
+header.solid{background:rgba(28,7,24,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(214,170,82,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:88px}
+.nav .brand img{height:60px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+.nav ul a{color:var(--cream);text-decoration:none;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:400;opacity:.88}
+.nav ul a:hover{opacity:1;color:var(--gold-light)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.lang{display:flex;border:1px solid rgba(214,170,82,.5);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--cream);font-size:12px;letter-spacing:.15em;padding:7px 12px;opacity:.7}
+.lang button.on{background:var(--gold-light);color:var(--plum-night);opacity:1;font-weight:500}
+.nav .btn{padding:11px 22px;font-size:12px}
+.burger{display:none;background:none;border:0;width:40px;height:40px;position:relative}
+.burger span{position:absolute;left:9px;right:9px;height:1.5px;background:var(--cream);transition:.3s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:26px}
+.menu-open .burger span:nth-child(1){top:20px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){top:20px;transform:rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 90% at 85% 10%,#4a0f3e 0%,var(--plum-deep) 45%,var(--plum-night) 100%);color:var(--cream);overflow:hidden;padding:150px 0 110px}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(44px,4.9vw,72px);color:var(--cream);margin:20px 0 26px;font-weight:500}
+.hero h1 span{display:block}
+.hero .lead strong{color:var(--cream);font-weight:500}
+.hero .lead{font-size:20px;margin-bottom:36px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:38px;font-size:14px;letter-spacing:.04em;color:#d9c8d3}
+.status i{width:9px;height:9px;border-radius:50%;background:#6fcf8f;box-shadow:0 0 0 4px rgba(111,207,143,.18)}
+.status.closed i{background:#c9a07a;box-shadow:0 0 0 4px rgba(201,160,122,.18)}
+.arch{position:relative;border-radius:999px 999px 18px 18px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.arch-frame{position:relative}
+.arch-frame:before{content:"";position:absolute;inset:-16px;border:1px solid rgba(214,170,82,.45);border-radius:999px 999px 26px 26px;pointer-events:none}
+.badge{position:absolute;left:-46px;bottom:56px;background:var(--cream);color:var(--plum);border-radius:50%;width:132px;height:132px;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.15;box-shadow:0 20px 40px -15px rgba(0,0,0,.5);transform:rotate(-8deg)}
+.badge b{display:block;font-style:normal;font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.28em;color:var(--gold);margin-bottom:4px}
+
+/* sections */
+section{padding:120px 0}
+.dark{background:var(--plum-deep);color:var(--cream)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.about-photos{position:relative;height:640px}
+.about-photos .p1{position:absolute;left:0;top:0;width:68%;height:86%;object-fit:cover;border-radius:999px 999px 14px 14px}
+.about-photos .p2{position:absolute;right:0;bottom:0;width:48%;height:52%;object-fit:cover;border-radius:14px;border:8px solid var(--cream);box-shadow:0 30px 50px -25px rgba(42,10,36,.5)}
+.about p{margin-bottom:18px;color:#4c3a46}
+.brandword{font-family:var(--serif);font-weight:600;font-size:1.3em;color:var(--plum);letter-spacing:.04em;line-height:1}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px;padding-top:30px;border-top:1px solid #dccbb5}
+.features h4{font-family:var(--serif);font-size:20px;line-height:1.15;font-weight:600;color:var(--plum);margin:10px 0 4px}
+.features p{font-size:14.5px;margin:0;color:var(--muted)}
+.features svg{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.3}
+
+/* dayparts */
+.dayparts{background:var(--cream-2);padding:90px 0}
+.dp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px}
+.dp{background:var(--cream);border-radius:var(--radius);padding:38px 32px;position:relative;border:1px solid #e3d5c1}
+.dp .time{font-family:var(--sans);font-size:12px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;font-weight:500}
+.dp h3{font-size:34px;color:var(--plum);margin:10px 0 12px}
+.dp p{color:var(--muted);font-size:15.5px}
+.dp .num{position:absolute;right:26px;top:22px;font-family:var(--serif);font-style:italic;font-size:46px;color:#e6d6bf}
+
+/* menu */
+.menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.legend{font-size:14px;color:var(--muted);text-align:right}
+.legend .tag{margin:0 3px}
+/* menu accordion */
+:root{interpolate-size:allow-keywords}
+details::details-content{block-size:0;overflow-y:clip;transition:block-size .45s ease,content-visibility .45s allow-discrete}
+details[open]::details-content{block-size:auto}
+summary{list-style:none;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:44px 0 0;border-bottom:1px solid #dccbb5}
+.tabs button{background:none;border:0;padding:16px 18px;font-family:var(--sans);font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);position:relative;font-weight:500;white-space:nowrap}
+.tabs button:hover{color:var(--plum-soft)}
+.tabs button.on{color:var(--plum)}
+.tabs button.on:after{content:"";position:absolute;left:18px;right:18px;bottom:-1px;height:2px;background:var(--gold)}
+.menu-intro{font-family:var(--sans);font-size:17px;color:var(--plum-soft);margin:24px 0 18px}
+.macc{min-height:200px}
+.msec{border-radius:12px;margin-bottom:10px;background:#fbf7f0;border:1px solid #eadcc8}
+.msec>summary{display:flex;align-items:center;gap:16px;padding:18px 24px}
+.msec>summary h3{font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.msec>summary .snote{font-family:var(--sans);color:var(--muted);font-size:14.5px;flex:1}
+.msec>summary .snote:empty{display:none}
+.chev{flex:none;width:10px;height:10px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(45deg);transition:transform .35s;margin:-4px 6px 0 auto}
+.msec[open]>summary .chev{transform:rotate(-135deg);margin-top:4px}
+.msec-body{padding:0 24px 18px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.msec-body .colhead{grid-column:1/-1}
+.msec-body.multi{display:block;columns:2;column-gap:56px}
+.msec-body .sub{break-inside:avoid;margin:6px 0 22px}
+.msec-body .sub h4{font-family:var(--sans);font-size:15px;letter-spacing:.08em;font-weight:500;color:var(--plum);border-bottom:1px solid #e3d3bd;padding-bottom:4px}
+.msec-body .sub .gnote{color:var(--muted);font-size:14px}
+/* featured: the grill */
+.msec.featured{background:var(--plum-deep);border-color:var(--gold-light);box-shadow:0 24px 50px -30px rgba(42,10,36,.6)}
+.msec.featured>summary h3{color:var(--gold-light);font-size:17px;font-weight:600}
+.msec.featured>summary .snote{color:#cdb8c6}
+.msec.featured .chev{border-color:var(--gold-light)}
+.flame{display:inline-flex;align-items:center;background:var(--gold-light);color:var(--plum-night);font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.msec.featured .item{border-bottom-color:rgba(214,170,82,.25)}
+.msec.featured .item .name{color:var(--cream);font-weight:600;font-size:18px}
+.msec.featured .item .single{color:var(--gold-light)}
+.msec.featured .item .desc{color:#cbb8c5}
+.msec.featured .tag{border-color:#a9c98a;color:#c3dea6}
+.mgroup h3{font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+.mgroup h3:after{content:"";flex:1;height:1px;background:#dccbb5}
+.mgroup .gnote{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:17px;margin-top:4px}
+.colhead{display:flex;justify-content:flex-end;gap:0;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.colhead span,.prices span{width:62px;text-align:right}
+.item{padding:14px 0 12px;border-bottom:1px dashed #e0d0bb}
+.item:last-child{border-bottom:0}
+.item .row{display:flex;align-items:baseline;gap:10px}
+.item .name{font-family:var(--sans);font-size:17px;font-weight:500;color:var(--ink);line-height:1.2}
+.item .lead-dots{flex:1}
+.item .prices{display:flex;font-family:var(--sans);font-size:16px;color:var(--plum);font-weight:500;white-space:nowrap}
+.item .single{font-family:var(--sans);font-size:16px;color:var(--plum);font-weight:500;white-space:nowrap}
+.item .desc{font-size:14.5px;color:var(--muted);margin-top:2px;max-width:92%}
+.tag{display:inline-block;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.1em;padding:2px 7px;border-radius:999px;border:1px solid #7b9a5a;color:#5d7d3f;vertical-align:middle;margin-left:6px;position:relative;top:-2px}
+.tag.vn{background:#5d7d3f;color:#fff;border-color:#5d7d3f}
+.allergy{margin-top:20px;padding:22px 26px;border-radius:var(--radius);background:var(--cream-2);display:flex;gap:16px;align-items:center;font-size:15px;color:var(--muted)}
+.allergy svg{flex:none;width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.4}
+
+/* photo band */
+.band{display:grid;grid-template-columns:1fr 1fr 1fr;height:520px}
+.band img{width:100%;height:100%;object-fit:cover}
+
+/* groups */
+.groups{background:var(--plum-deep);position:relative;overflow:hidden}
+.groups:before{content:"";position:absolute;right:-220px;top:-220px;width:620px;height:620px;border-radius:50%;border:1px solid rgba(214,170,82,.18)}
+.groups-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative}
+.occasions{list-style:none;margin:30px 0;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.occasions li{display:flex;gap:12px;align-items:baseline;color:#eadde5;font-size:16.5px}
+.occasions li:before{content:"◆";color:var(--gold-light);font-size:9px;position:relative;top:-2px}
+.custom{border-left:2px solid var(--gold-light);padding:6px 0 6px 20px;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold-pale);margin-top:10px}
+.evcard{background:rgba(247,241,232,.05);border:1px solid rgba(214,170,82,.3);border-radius:20px;padding:40px}
+.evcard h3{font-size:36px;color:var(--cream);margin-bottom:10px}
+.evcard p{color:#d4c2ce;margin-bottom:26px}
+.evcard .btns{display:flex;flex-direction:column;gap:12px}
+.evcard .btn{justify-content:center;text-transform:none;letter-spacing:.06em;font-size:15px}
+.evcard .btn-line{color:var(--gold-light);border-color:rgba(214,170,82,.6)}
+.evcard small{display:block;margin-top:18px;color:#b9a4b2;font-size:14px}
+
+/* gallery */
+.gal-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:260px 260px 300px;grid-template-areas:"a b c d" "a e c d" "f f g h";gap:14px;margin-top:46px}
+.ga{grid-area:a}.gb{grid-area:b}.gc{grid-area:c}.gd{grid-area:d}.ge{grid-area:e}.gf{grid-area:f}.gg{grid-area:g}.gh{grid-area:h}
+.gallery figure{overflow:hidden;border-radius:12px;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.gallery figure:hover img{transform:scale(1.05)}
+.ig{display:inline-flex;align-items:center;gap:10px;color:var(--plum);text-decoration:none;font-weight:500;letter-spacing:.06em}
+.ig svg{width:22px;height:22px}
+
+/* reserve */
+.reserve{background:var(--cream-2)}
+.res-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.res-ctas .btn-line{color:var(--plum)}
+/* booking fallback popup (shown only while the Zenchef widget is not loaded) */
+dialog.bk{border:0;border-radius:22px;padding:0;max-width:460px;width:calc(100% - 32px);margin:auto;background:var(--cream);color:var(--ink);box-shadow:0 40px 80px -20px rgba(0,0,0,.5)}
+dialog.bk::backdrop{background:rgba(28,7,24,.65);backdrop-filter:blur(3px)}
+dialog.bk .in{padding:46px 36px 36px;text-align:center}
+dialog.bk h3{font-size:36px;color:var(--plum);margin:8px 0 10px}
+dialog.bk p{color:var(--muted);margin-bottom:24px}
+dialog.bk .btns{display:flex;flex-direction:column;gap:10px}
+dialog.bk .btn{justify-content:center}
+dialog.bk .btn-line{color:var(--plum)}
+dialog.bk .x{position:absolute;right:14px;top:12px;background:none;border:0;font-size:30px;line-height:1;color:var(--muted)}
+.res-note{text-align:center;color:var(--muted);font-size:15px;margin-top:22px}
+.res-note a{color:var(--plum)}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;margin-top:50px}
+.card{background:#fff;border-radius:var(--radius);padding:34px;border:1px solid #eadfcf}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:11px 0;border-bottom:1px solid #efe5d6}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours td:nth-child(2){text-align:right;font-weight:500}
+.hours tr.today td{color:var(--plum);font-weight:500}
+.hours tr.today td:first-child:after{content:"•";color:var(--gold);margin-left:8px}
+.hours th{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-align:right;font-weight:500;padding-bottom:6px}
+.hours th:first-child{text-align:left}
+.callout{margin-top:20px;font-size:15px;color:var(--muted);display:flex;gap:12px}
+.callout svg{flex:none;width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5;margin-top:2px}
+.callout a{color:var(--plum);font-weight:500}
+.info h3{font-size:30px;color:var(--plum);margin-bottom:8px}
+.info .addr{font-size:19px;margin-bottom:20px}
+.contact-list{list-style:none;margin:16px 0 28px}
+.contact-list li{display:flex;gap:14px;align-items:center;padding:9px 0}
+.contact-list svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;flex:none}
+.contact-list a{text-decoration:none;color:var(--ink)}
+.contact-list a:hover{color:var(--plum)}
+.getting{display:grid;gap:14px;margin-top:6px}
+.getting div{display:flex;gap:14px;align-items:flex-start;background:var(--cream);border-radius:12px;padding:16px 18px}
+.getting .ic{flex:none;width:40px;height:40px;border-radius:50%;background:var(--plum);color:var(--gold-light);display:grid;place-items:center;font-weight:500;font-size:13px;letter-spacing:.05em}
+.getting b{display:block;font-weight:500;color:var(--ink)}
+.getting span{font-size:15px;color:var(--muted)}
+.map{margin-top:24px;border-radius:14px;overflow:hidden;height:280px;background:linear-gradient(135deg,var(--cream-2),#e5d6c0);display:grid;place-items:center}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) sepia(.15)}
+.map a{color:var(--plum)}
+
+/* footer */
+footer{background:var(--plum-night);color:#cbb8c5;padding:80px 0 40px}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.foot img{height:86px;width:auto;margin-bottom:18px}
+.foot h5{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);margin-bottom:16px}
+.foot a{text-decoration:none;color:#e5d6df}
+.foot a:hover{color:var(--gold-light)}
+.foot p,.foot li{font-size:15px;line-height:1.9;list-style:none}
+.fbrand{display:inline-flex;flex-direction:column;align-items:center;text-align:center}
+.tagline{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold-pale)}
+.copy{border-top:1px solid rgba(214,170,82,.18);margin-top:60px;padding-top:24px;display:flex;justify-content:space-between;font-size:13px;flex-wrap:wrap;gap:10px}
+
+/* mobile bar */
+.mbar{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+@media (min-width:1021px){.hero h1 span{white-space:nowrap}}
+@media (max-width:1020px){
+  .nav ul{display:none}
+  .burger{display:block}
+  .menu-open .nav ul{display:flex;position:fixed;top:88px;left:0;right:0;bottom:0;flex-direction:column;justify-content:center;gap:30px;background:var(--plum-night)}
+  .menu-open .nav ul a{font-size:22px;font-family:var(--serif);letter-spacing:.06em;text-transform:none}
+  .nav .btn{display:none}
+  .hero{padding:120px 0 80px}
+  .hero-grid,.about-grid,.groups-grid,.visit-grid{grid-template-columns:1fr;gap:56px}
+  .arch-frame{max-width:420px;margin:0 auto;width:85%}
+  .badge{left:-30px;width:112px;height:112px;font-size:16px}
+  .about-photos{height:520px}
+  .dp-grid{grid-template-columns:1fr}
+  .msec-body{grid-template-columns:1fr}
+  .msec-body.multi{columns:1}
+  .band{grid-template-columns:1fr 1fr;height:360px}.band img:nth-child(3){display:none}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,190px) 200px 190px;grid-template-areas:"a b" "a e" "c d" "c d" "f f" "g h"}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:84px 0}
+  .wrap{padding:0 20px}
+  .features{grid-template-columns:1fr}
+  .occasions{grid-template-columns:1fr}
+  .f2{grid-template-columns:1fr}
+  .evcard{padding:28px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-left:-20px;margin-right:-20px;padding:0 8px;scroll-padding:0 20px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{font-size:12.5px;padding:14px 12px}
+  .tabs button.on:after{left:12px;right:12px}
+  .msec>summary{padding:16px;flex-wrap:wrap}
+  .msec>summary .snote{flex-basis:100%;order:3;font-size:15.5px}
+  .msec-body{padding:0 16px 12px}
+  .legend{text-align:left}
+  .item .name{font-size:16.5px}
+  .about-photos{height:430px}
+  .foot{grid-template-columns:1fr}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;gap:10px;transition:transform .3s}
+  .mbar a{flex:1;justify-content:center;padding:15px 10px;box-shadow:0 10px 30px -8px rgba(0,0,0,.45)}
+  .mbar a.btn-line{background:var(--plum-night);color:var(--cream);border-color:var(--gold-light)}
+  footer{padding-bottom:110px}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="LIVA"><img src="img/logo-gold.png" alt="LIVA Mediterranean Soul"></a>
+    <ul id="navlinks">
+      <li><a href="#menu" data-i18n="nav_menu">Menu</a></li>
+      <li><a href="#about" data-i18n="nav_about">Over ons</a></li>
+      <li><a href="#groups" data-i18n="nav_groups">Groepen</a></li>
+      <li><a href="#gallery" data-i18n="nav_gallery">Sfeer</a></li>
+      <li><a href="#visit" data-i18n="nav_visit">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="nl" class="on">NL</button><button data-lang="en">EN</button>
+      </div>
+      <button type="button" class="btn btn-gold js-book" data-zc-action="open" data-i18n="book">Reserveer</button>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero dark" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" data-i18n="hero_eyebrow">Mercatorplein · Amsterdam West</div>
+      <h1 data-i18n="hero_title"><span>Snel gevonden.</span><span><em>Moeilijk weg te gaan.</em></span></h1>
+      <p class="lead" data-i18n="hero_lead">Een mediterrane keuken en bar aan het Mercatorplein. Begin je dag met koffie en ontbijt, neem de tijd voor de lunch en blijf hangen voor de grill en nog één laatste rondje.</p>
+      <div class="hero-ctas">
+        <button type="button" class="btn btn-gold js-book" data-zc-action="open" data-i18n="book_table">Reserveer een tafel</button>
+        <a href="#menu" class="btn btn-line" data-i18n="see_menu">Bekijk het menu</a>
+      </div>
+      <div class="status" id="status"><i></i><span></span></div>
+    </div>
+    <div class="arch-frame">
+      <div class="arch"><img src="img/interior-sign.jpg" alt="LIVA Mediterranean Soul – round table in front of the open kitchen"></div>
+      <div class="badge"><div><b data-i18n="badge_top">LIVA</b><span data-i18n="badge_txt">Samen komen,<br>delen &amp;<br>genieten</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photos rv">
+      <img class="p1" src="img/breakfast.jpg" alt="LIVA breakfast by the window on a rainy day at Mercatorplein">
+      <img class="p2" src="img/flatbread.jpg" alt="Köfte flatbread in the sunshine by the window">
+    </div>
+    <div class="rv">
+      <div class="eyebrow" data-i18n="about_eyebrow">Ons verhaal</div>
+      <h2 data-i18n="about_title">Een vertrouwde plek, <em>nieuwe smaken</em></h2>
+      <div class="diamond">◆</div>
+      <p class="first" data-i18n="about_p1"><span class="brandword">LIVA</span> begon met een simpele wens: een plek waar je je thuis voelt zodra je binnenstapt. Al jaren is dit hoekje van het Mercatorplein de plek waar mensen samenkomen, blijven hangen en steeds weer terugkomen. Het team achter LIVA is hier mee opgegroeid, en nu schrijven we het volgende hoofdstuk.</p>
+      <p data-i18n="about_p2">Alles wat we hebben geleerd, stoppen we in een mediterrane keuken om te delen: meze, gerechten van de grill, Spaanse tapas, Griekse klassiekers en onze geliefde pasta. Met overal ramen is het hier knus op een regenachtige dag en vol licht als de zon schijnt.</p>
+      <p data-i18n="about_p3">Vertrouwde gezichten, een nieuw hart. Of je hier al jaren komt of voor het eerst binnenloopt: welkom thuis. Je komt binnen als gast en gaat weg als vriend.</p>
+      <div class="features">
+        <div><svg viewBox="0 0 32 32"><path d="M16 27s-10-6-10-13a5.5 5.5 0 0 1 10-3 5.5 5.5 0 0 1 10 3c0 7-10 13-10 13z"/></svg><h4 data-i18n="f1_t">Gastvrij</h4><p data-i18n="f1_d">Warme service, altijd welkom</p></div>
+        <div><svg viewBox="0 0 32 32"><path d="M8 20a6 6 0 0 1 1-12 8 8 0 0 1 15 2 5 5 0 0 1-1 10z"/><path d="M11 24l-1 3M17 24l-1 3M23 24l-1 3"/></svg><h4 data-i18n="f2_t">Knus bij elk weer</h4><p data-i18n="f2_d">Gezellig als het regent, sfeervol als het donker is</p></div>
+        <div><svg viewBox="0 0 32 32"><path d="M6 12h17v7a7 7 0 0 1-7 7h-3a7 7 0 0 1-7-7z"/><path d="M23 14h2a3 3 0 0 1 0 6h-2"/><path d="M11 4c-1 2 1 3 0 5M16 4c-1 2 1 3 0 5"/></svg><h4 data-i18n="f3_t">Altijd iets</h4><p data-i18n="f3_d">Koffie, ontbijt, lunch, diner en drankjes</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAYPARTS -->
+<section class="dayparts">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow" data-i18n="dp_eyebrow">Van ochtend tot laat</div>
+      <h2 data-i18n="dp_title">Elk moment <em>een reden</em></h2>
+    </div>
+    <div class="dp-grid">
+      <div class="dp rv"><span class="num">i</span><div class="time" data-i18n="dp1_time">Vanaf 09:00 · 10:00</div><h3 data-i18n="dp1_t">Ontbijt & lunch</h3><p data-i18n="dp1_d">LIVA breakfast, Turks ontbijt, shakshuka, flatbreads en verse sandwiches op zuurdesem. Met een flat white of iced matcha erbij.</p></div>
+      <div class="dp rv"><span class="num">ii</span><div class="time" data-i18n="dp2_time">De hele middag</div><h3 data-i18n="dp2_t">Meze & borrel</h3><p data-i18n="dp2_d">Proeverijen en rakı meze, bitterballen en calamares. Met een spritz, huisgemaakte limonade of speciaalbier van de tap.</p></div>
+      <div class="dp rv"><span class="num">iii</span><div class="time" data-i18n="dp3_time">Keuken tot 21:00 · vr–za 22:00</div><h3 data-i18n="dp3_t">Diner</h3><p data-i18n="dp3_d">Van de grill, uit de oven en uit onze pasta club. Begin met meze om te delen, sluit af met huisgemaakte baklava.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="wrap">
+    <div class="menu-head rv">
+      <div>
+        <div class="eyebrow" data-i18n="menu_eyebrow">Eten & drinken</div>
+        <h2 data-i18n="menu_title">Ons <em>menu</em></h2>
+      </div>
+      <div class="legend"><span class="tag">V</span> <span data-i18n="veg">vegetarisch</span> &nbsp; <span class="tag vn">VN</span> <span data-i18n="vegan">veganistisch</span></div>
+    </div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <p class="menu-intro" id="menuIntro"></p>
+    <div class="macc" id="menuAcc"></div>
+    <div class="allergy"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 7v6M12 16.5v.5"/></svg><span data-i18n="allergy">Heb je een allergie of dieetwens? Laat het ons weten, dan denken we graag met je mee. Prijzen in euro's, inclusief btw.</span></div>
+  </div>
+</section>
+
+<div class="band">
+  <img src="img/croquettes.jpg" alt="Truffle croquettes on sourdough with an iced matcha" loading="lazy">
+  <img src="img/guvec.jpg" alt="Tavuk güveç with rice and shepherd's salad" loading="lazy">
+  <img src="img/lemonade.jpg" alt="Homemade LIVA lemonade with mint" loading="lazy">
+</div>
+
+<!-- GROUPS -->
+<section class="groups dark" id="groups">
+  <div class="wrap groups-grid">
+    <div class="rv">
+      <div class="eyebrow" data-i18n="g_eyebrow">Groepen & events</div>
+      <h2 data-i18n="g_title">Samen aan <em>lange tafels</em></h2>
+      <div class="diamond">◆</div>
+      <p class="lead" data-i18n="g_lead">Kom je met meer dan 12 personen? Dan maken we er samen iets bijzonders van, of het nu gaat om een zakelijke lunch of een verjaardag die niemand vergeet.</p>
+      <ul class="occasions">
+        <li data-i18n="o1">Bedrijfslunch & -diner</li>
+        <li data-i18n="o2">Borrels met collega's</li>
+        <li data-i18n="o3">Verjaardagen & vieringen</li>
+        <li data-i18n="o4">Lange tafels of walking dinner</li>
+      </ul>
+      <p class="custom" data-i18n="g_custom">Speciale groepsmenu's, helemaal afgestemd op jullie wensen.</p>
+    </div>
+    <div class="evcard rv">
+      <h3 data-i18n="ev_title">Plan je event</h3>
+      <p data-i18n="ev_text">Laat ons de datum, het aantal gasten en je wensen weten. Dan stellen we een voorstel op dat bij jullie past.</p>
+      <div class="btns">
+        <a class="btn btn-gold" id="evMail" href="mailto:info@cafeliva.nl?subject=Groepsreservering"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@cafeliva.nl</a>
+        <a class="btn btn-line" href="tel:+31203583160"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+31 20 358 3160</a>
+      </div>
+      <small data-i18n="ev_small">Voor groepen van meer dan 12 personen, bedrijfsevents en feesten.</small>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY / SOCIAL -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="gal-head rv">
+      <div>
+        <div class="eyebrow" data-i18n="gal_eyebrow">Proef de sfeer</div>
+        <h2 data-i18n="gal_title">Een kijkje <em>bij LIVA</em></h2>
+      </div>
+      <a class="ig" href="https://www.instagram.com/cafeliva.amsterdam/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+        <span data-i18n="ig_follow">Volg ons @cafeliva.amsterdam</span>
+      </a>
+    </div>
+    <div class="gallery">
+      <figure class="ga rv"><img src="img/interior.jpg" alt="Round booth and open kitchen at LIVA" loading="lazy"></figure>
+      <figure class="gb rv"><img src="img/lemonade.jpg" alt="Homemade lemonade" loading="lazy"></figure>
+      <figure class="ge rv"><img src="img/croissant.jpg" alt="Croissant with butter and rose jam" loading="lazy"></figure>
+      <figure class="gc rv"><img src="img/croquettes.jpg" alt="Truffle croquettes with iced matcha" loading="lazy"></figure>
+      <figure class="gd rv"><img src="img/bar.jpg" alt="The bar" loading="lazy"></figure>
+      <figure class="gf rv"><img src="img/kitchen-wide.jpg" alt="The LIVA sign above the open kitchen at night" loading="lazy"></figure>
+      <figure class="gg rv"><img src="img/soup.jpg" alt="Lentil soup with bread" loading="lazy"></figure>
+      <figure class="gh rv"><img src="img/guvec.jpg" alt="Tavuk güveç" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVE -->
+<section class="reserve" id="reserve">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow" data-i18n="r_eyebrow">Reserveren</div>
+      <h2 data-i18n="r_title">Reserveer <em>een tafel</em></h2>
+      <div class="diamond">◆</div>
+      <p class="lead" style="margin:0 auto" data-i18n="r_lead">Kies je datum, tijd en aantal personen en ontvang direct een bevestiging. Liever bellen? Dat kan natuurlijk ook.</p>
+    </div>
+    <div class="res-ctas rv">
+      <button type="button" class="btn btn-plum js-book" data-zc-action="open" data-i18n="book_table">Reserveer een tafel</button>
+      <a class="btn btn-line" href="tel:+31203583160">+31 20 358 3160</a>
+    </div>
+    <p class="res-note"><span data-i18n="r_groups">Met meer dan 12 personen?</span> <a href="#groups" data-i18n="r_groups_link">Bekijk onze groepsmogelijkheden</a></p>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow" data-i18n="v_eyebrow">Bezoek ons</div>
+      <h2 data-i18n="v_title">Tot <em>snel</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="rv">
+        <div class="card">
+          <table class="hours" id="hours">
+            <thead><tr><th></th><th data-i18n="h_open">Open</th><th data-i18n="h_kitchen">Keuken</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <div class="callout"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            <span><span data-i18n="h_longer">We zijn vaak langer open. Bel gerust even om het te checken:</span> <a href="tel:+31203583160">+31 20 358 3160</a></span>
+          </div>
+        </div>
+        <div class="map" id="map"><a href="https://maps.google.com/?q=Mercatorplein+2b,+1057+CB+Amsterdam" target="_blank" rel="noopener" data-i18n="route">Plan je route →</a></div>
+      </div>
+      <div class="info rv">
+        <h3>LIVA</h3>
+        <p class="addr">Mercatorplein 2b<br>1057 CB Amsterdam</p>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+31203583160">+31 20 358 3160</a></li>
+          <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:info@cafeliva.nl">info@cafeliva.nl</a></li>
+          <li><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg><a href="https://www.instagram.com/cafeliva.amsterdam/" target="_blank" rel="noopener">@cafeliva.amsterdam</a></li>
+        </ul>
+        <div class="eyebrow" style="margin-bottom:14px" data-i18n="getting">Bereikbaarheid</div>
+        <div class="getting">
+          <div><span class="ic">7·13</span><p><b data-i18n="tram_t">Tram 7 & 13</b><span data-i18n="tram_d">Halte op 2 minuten lopen</span></p></div>
+          <div><span class="ic">15·18</span><p><b data-i18n="bus_t">Bus 15 & 18</b><span data-i18n="bus_d">Halte op 2 minuten lopen</span></p></div>
+          <div><span class="ic">P</span><p><b data-i18n="park_t">Grote openbare parkeergarage</b><span data-i18n="park_d">Direct onder het Mercatorplein</span></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="fbrand"><img src="img/logo-gold.png" alt="LIVA Mediterranean Soul"><p class="tagline" data-i18n="foot_tag">Samen komen · delen · genieten</p></div></div>
+      <div><h5 data-i18n="f_visit">Adres</h5><p>Mercatorplein 2b<br>1057 CB Amsterdam</p></div>
+      <div><h5 data-i18n="f_contact">Contact</h5><ul><li><a href="tel:+31203583160">+31 20 358 3160</a></li><li><a href="mailto:info@cafeliva.nl">info@cafeliva.nl</a></li><li><a href="https://www.instagram.com/cafeliva.amsterdam/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+      <div><h5 data-i18n="f_hours">Openingstijden</h5><p data-i18n="f_hours_txt">ma–do 10–23<br>vr 10–00 · za 09–00<br>zo 09–23</p></div>
+    </div>
+    <div class="copy"><span>© <span id="yr"></span> LIVA · Mediterranean Soul</span><span>cafeliva.nl</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <button type="button" class="btn btn-gold js-book" data-zc-action="open" data-i18n="book">Reserveer</button>
+  <a href="tel:+31203583160" class="btn btn-line" data-i18n="call">Bel ons</a>
+</div>
+
+<dialog class="bk" id="bk">
+  <button class="x" aria-label="Close" onclick="this.closest('dialog').close()">×</button>
+  <div class="in">
+    <div class="eyebrow" data-i18n="r_eyebrow">Reserveren</div>
+    <h3 data-i18n="rf_title">We houden een plekje voor je vrij</h3>
+    <p data-i18n="rf_text">Reserveer telefonisch of per e-mail. Ook zonder reservering ben je van harte welkom.</p>
+    <div class="btns">
+      <a class="btn btn-plum" href="tel:+31203583160">+31 20 358 3160</a>
+      <a class="btn btn-line" href="mailto:info@cafeliva.nl">info@cafeliva.nl</a>
+    </div>
+  </div>
+</dialog>
+
+<script src="menu-data.js"></script>
+<script>
+
+const T = {
+  nl: {
+    nav_menu:"Menu", nav_about:"Over ons", nav_groups:"Groepen", nav_gallery:"Sfeer", nav_visit:"Contact",
+    book:"Reserveer", book_table:"Reserveer een tafel", see_menu:"Bekijk het menu", call:"Bel ons",
+    hero_eyebrow:"Mercatorplein · Amsterdam West",
+    hero_title:"<span>Snel gevonden.</span><span><em>Moeilijk weg te gaan.</em></span>",
+    hero_lead:"Een mediterrane keuken en bar aan het Mercatorplein. Begin je dag met koffie en ontbijt, neem de tijd voor de lunch en blijf hangen voor de grill en nog één laatste rondje.",
+    badge_top:"LIVA", badge_txt:"Samen komen,<br>delen &amp;<br>genieten",
+    about_eyebrow:"Ons verhaal", about_title:"Een vertrouwde plek, <em>nieuwe smaken</em>",
+    about_p1:"<span class='brandword'>LIVA</span> begon met een simpele wens: een plek waar je je thuis voelt zodra je binnenstapt. Al jaren is dit hoekje van het Mercatorplein de plek waar mensen samenkomen, blijven hangen en steeds weer terugkomen. Het team achter LIVA is hier mee opgegroeid, en nu schrijven we het volgende hoofdstuk.",
+    about_p2:"Alles wat we hebben geleerd, stoppen we in een mediterrane keuken om te delen: meze, gerechten van de grill, Spaanse tapas, Griekse klassiekers en onze geliefde pasta. Met overal ramen is het hier knus op een regenachtige dag en vol licht als de zon schijnt.",
+    about_p3:"Vertrouwde gezichten, een nieuw hart. Of je hier al jaren komt of voor het eerst binnenloopt: welkom thuis. Je komt binnen als gast en gaat weg als vriend.",
+    f1_t:"Gastvrij", f1_d:"Warme service, altijd welkom", f2_t:"Knus bij elk weer", f2_d:"Gezellig als het regent, sfeervol als het donker is", f3_t:"Altijd iets", f3_d:"Koffie, ontbijt, lunch, diner en drankjes",
+    dp_eyebrow:"Van ochtend tot laat", dp_title:"Elk moment <em>een reden</em>",
+    dp1_time:"Vanaf 10:00 · weekend 09:00", dp1_t:"Ontbijt & lunch", dp1_d:"LIVA breakfast, Turks ontbijt, shakshuka, flatbreads en verse sandwiches op zuurdesem. Met een flat white of iced matcha erbij.",
+    dp2_time:"De hele middag & avond", dp2_t:"Meze & borrel", dp2_d:"Proeverijen en rakı meze, bitterballen en calamares. Met een spritz, huisgemaakte limonade of speciaalbier van de tap.",
+    dp3_time:"Keuken tot 21:00 · vr–za 22:00", dp3_t:"Diner", dp3_d:"Van de grill, uit de oven en uit onze pasta club. Begin met meze om te delen, sluit af met huisgemaakte baklava.",
+    menu_eyebrow:"Eten & drinken", menu_title:"Ons <em>menu</em>", veg:"vegetarisch", vegan:"veganistisch",
+    allergy:"Heb je een allergie of dieetwens? Laat het ons weten, dan denken we graag met je mee. Prijzen in euro's.",
+    g_eyebrow:"Groepen & events", g_title:"Samen aan <em>lange tafels</em>",
+    g_lead:"Kom je met meer dan 12 personen? Dan maken we er samen iets bijzonders van, of het nu gaat om een zakelijke lunch of een verjaardag die niemand vergeet.",
+    o1:"Bedrijfslunch & -diner", o2:"Borrels met collega's", o3:"Verjaardagen & vieringen", o4:"Lange tafels of walking dinner",
+    g_custom:"Speciale groepsmenu's, helemaal afgestemd op jullie wensen.",
+    ev_title:"Plan je event", ev_text:"Laat ons de datum, het aantal gasten en je wensen weten. Dan stellen we een voorstel op dat bij jullie past.", ev_mail:"Mail ons", ev_call:"Bel ons", ev_small:"Voor groepen van meer dan 12 personen, bedrijfsevents en feesten.", ev_subject:"Groepsreservering", signature:"Onze specialiteit",
+    gal_eyebrow:"Proef de sfeer", gal_title:"Een kijkje <em>bij LIVA</em>", ig_follow:"Volg ons @cafeliva.amsterdam",
+    r_eyebrow:"Reserveren", r_title:"Reserveer <em>een tafel</em>", r_lead:"Kies je datum, tijd en aantal personen en ontvang direct een bevestiging. Liever bellen? Dat kan natuurlijk ook.",
+    rf_title:"We houden een plekje voor je vrij", rf_text:"Reserveer telefonisch of per e-mail. Ook zonder reservering ben je van harte welkom.",
+    r_groups:"Met meer dan 12 personen?", r_groups_link:"Bekijk onze groepsmogelijkheden",
+    v_eyebrow:"Bezoek ons", v_title:"Tot <em>snel</em>", h_open:"Open", h_kitchen:"Keuken",
+    h_longer:"We zijn vaak langer open. Bel gerust even om het te checken:", route:"Plan je route →",
+    getting:"Bereikbaarheid", tram_t:"Tram 7 & 13", tram_d:"Halte op 2 minuten lopen", bus_t:"Bus 15 & 18", bus_d:"Halte op 2 minuten lopen",
+    park_t:"Grote openbare parkeergarage", park_d:"Direct onder het Mercatorplein",
+    foot_tag:"Samen komen · delen · genieten", f_visit:"Adres", f_contact:"Contact", f_hours:"Openingstijden",
+    f_hours_txt:"ma–do 10:00–23:00<br>vr 10:00–00:00<br>za 09:00–00:00<br>zo 09:00–23:00",
+    days:["Zondag","Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag"],
+    st_open:"Nu open · tot {c} · keuken tot {k}", st_open_nok:"Nu open · tot {c} · keuken gesloten", st_closed:"Nu gesloten · {d} open vanaf {o}", today:"vandaag", tomorrow:"morgen",
+  },
+  en: {
+    nav_menu:"Menu", nav_about:"About", nav_groups:"Groups", nav_gallery:"Gallery", nav_visit:"Visit",
+    book:"Book", book_table:"Book a table", see_menu:"View the menu", call:"Call us",
+    hero_eyebrow:"Mercatorplein · Amsterdam West",
+    hero_title:"<span>Easy to find.</span><span><em>Hard to leave.</em></span>",
+    hero_lead:"A Mediterranean kitchen and bar on Mercatorplein. Start your day with coffee and breakfast, linger over lunch, and stay on for the grill and one last round.",
+    badge_top:"LIVA", badge_txt:"Gather,<br>share<br>&amp; enjoy",
+    about_eyebrow:"Our story", about_title:"A familiar corner, <em>new flavours</em>",
+    about_p1:"<span class='brandword'>LIVA</span> started with a simple wish: a place where you feel at home the moment you walk in. For years, this corner of Mercatorplein has been where people meet, linger and come back again. The team behind LIVA grew up right here with it, and now we're writing the next chapter.",
+    about_p2:"We've taken everything we've learned and turned it into a Mediterranean kitchen made for sharing: meze, dishes straight from the grill, Spanish tapas, Greek classics and our much-loved pasta. With windows all around, it's snug on a rainy day and full of light when the sun comes out.",
+    about_p3:"Same familiar faces, a new heart. Whether you've come here for years or are walking in for the first time, welcome home. You arrive as a guest and leave as a friend.",
+    f1_t:"Hospitable", f1_d:"Warm service, always welcome", f2_t:"Cosy in any weather", f2_d:"Snug when it rains, glowing when it's dark", f3_t:"Always something", f3_d:"Coffee, breakfast, lunch, dinner and drinks",
+    dp_eyebrow:"From morning till late", dp_title:"Every moment <em>a reason</em>",
+    dp1_time:"From 10:00 · weekends 09:00", dp1_t:"Breakfast & lunch", dp1_d:"LIVA breakfast, Turkish breakfast, shakshuka, flatbreads and fresh sourdough sandwiches. With a flat white or an iced matcha on the side.",
+    dp2_time:"All afternoon & evening", dp2_t:"Meze & snacks", dp2_d:"Tasting platters and rakı meze, bitterballen and calamari. With a spritz, homemade lemonade or craft beer on tap.",
+    dp3_time:"Kitchen until 21:00 · Fri–Sat 22:00", dp3_t:"Dinner", dp3_d:"From the grill, from the oven and from our pasta club. Start with meze to share, finish with homemade baklava.",
+    menu_eyebrow:"Food & drinks", menu_title:"Our <em>menu</em>", veg:"vegetarian", vegan:"vegan",
+    allergy:"Do you have an allergy or dietary requirement? Let us know and we'll gladly help. Prices in euros.",
+    g_eyebrow:"Groups & events", g_title:"Together at <em>long tables</em>",
+    g_lead:"Coming with more than 12 people? Let's make it something special together, whether it's a business lunch or a birthday nobody will forget.",
+    o1:"Company lunch & dinner", o2:"Drinks with colleagues", o3:"Birthdays & celebrations", o4:"Long tables or walking dinner",
+    g_custom:"Special group menus, fully tailored to what you want.",
+    ev_title:"Plan your event", ev_text:"Tell us the date, number of guests and your wishes, and we'll put together a proposal that suits you.", ev_mail:"E-mail us", ev_call:"Call us", ev_small:"For groups of more than 12, company events and parties.", ev_subject:"Group booking", signature:"Our specialty",
+    gal_eyebrow:"Get a taste", gal_title:"A glimpse <em>of LIVA</em>", ig_follow:"Follow us @cafeliva.amsterdam",
+    r_eyebrow:"Reservations", r_title:"Book <em>a table</em>", r_lead:"Choose your date, time and party size and get a confirmation right away. Prefer to call? That works too.",
+    rf_title:"We'll save you a seat", rf_text:"Book by phone or e-mail. Walk-ins are always welcome too.",
+    r_groups:"More than 12 guests?", r_groups_link:"See our group options",
+    v_eyebrow:"Visit us", v_title:"See you <em>soon</em>", h_open:"Open", h_kitchen:"Kitchen",
+    h_longer:"We're often open later. Feel free to call and check:", route:"Get directions →",
+    getting:"Getting here", tram_t:"Tram 7 & 13", tram_d:"Stop just 2 minutes' walk away", bus_t:"Bus 15 & 18", bus_d:"Stop just 2 minutes' walk away",
+    park_t:"Large public parking garage", park_d:"Right underneath Mercatorplein",
+    foot_tag:"Gather · share · enjoy", f_visit:"Address", f_contact:"Contact", f_hours:"Opening hours",
+    f_hours_txt:"Mon–Thu 10:00–23:00<br>Fri 10:00–00:00<br>Sat 09:00–00:00<br>Sun 09:00–23:00",
+    days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    st_open:"Open now · until {c} · kitchen until {k}", st_open_nok:"Open now · until {c} · kitchen closed", st_closed:"Closed now · opens {d} at {o}", today:"today", tomorrow:"tomorrow",
+  }
+};
+
+/* opening hours: [open, close, kitchenClose] in hours; 24 = midnight. index 0 = Sunday */
+const HOURS = { 0:[9,23,21], 1:[10,23,21], 2:[10,23,21], 3:[10,23,21], 4:[10,23,21], 5:[10,24,22], 6:[9,24,22] };
+const ORDER = [1,2,3,4,5,6,0];
+
+let lang = "nl";
+
+const hh = h => (h === 24 ? "00" : String(h).padStart(2,"0")) + ":00";
+const fmt = p => {
+  if (p === "" || p == null) return "";
+  if (typeof p === "string") {
+    if (p.startsWith("+")) return "+ " + fmt(Number(p.slice(1)));
+    if (p === "d.p.") return lang === "nl" ? "d.p." : "p.o.a.";
+    return p;
+  }
+  return lang === "nl" ? p.toFixed(2).replace(".", ",") : p.toFixed(2);
+};
+
+function amsNow(){
+  const parts = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Amsterdam",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+  const g = t => parts.find(x=>x.type===t).value;
+  const day = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+  return { day, h: Number(g("hour")) % 24 + Number(g("minute"))/60 };
+}
+
+function renderStatus(){
+  const t = T[lang], {day, h} = amsNow(), [o,c,k] = HOURS[day];
+  const el = document.getElementById("status");
+  let txt, open = h >= o && h < c;
+  if (open) txt = (h < k ? t.st_open : t.st_open_nok).replace("{c}", hh(c)).replace("{k}", hh(k));
+  else {
+    const before = h < o, nd = before ? day : (day+1)%7;
+    txt = t.st_closed.replace("{d}", before ? t.today : t.tomorrow).replace("{o}", hh(HOURS[nd][0]));
+  }
+  el.classList.toggle("closed", !open);
+  el.querySelector("span").textContent = txt;
+}
+
+function renderHours(){
+  const t = T[lang], {day} = amsNow();
+  document.querySelector("#hours tbody").innerHTML = ORDER.map(d => {
+    const [o,c,k] = HOURS[d];
+    return `<tr class="${d===day?'today':''}"><td>${t.days[d]}</td><td>${hh(o)} – ${hh(c)}</td><td>${lang==="nl"?"tot":"until"} ${hh(k)}</td></tr>`;
+  }).join("");
+}
+
+function itemHTML(it, cols){
+  const name = lang === "nl" ? it.n : it.ne, desc = lang === "nl" ? it.dn : it.de;
+  const tag = it.t ? `<span class="tag ${it.t==="VN"?"vn":""}">${it.t}</span>` : "";
+  const price = Array.isArray(it.p)
+    ? `<span class="prices">${it.p.map(x=>`<span>${fmt(x)}</span>`).join("")}</span>`
+    : `<span class="single">${fmt(it.p)}</span>`;
+  return `<div class="item"><div class="row"><span class="name">${name}${tag}</span><span class="lead-dots"></span>${price}</div>${desc?`<div class="desc">${desc}</div>`:""}</div>`;
+}
+
+const OPEN = new Set();
+MENU.forEach(c => c.sections.forEach((s, i) => { if (s.open) OPEN.add(c.id + ":" + i); }));
+const colsHTML = cols => cols ? `<div class="colhead">${cols[lang].map(c => `<span>${c}</span>`).join("")}</div>` : "";
+const listHTML = items => items.map(i => itemHTML(i)).join("");
+
+let tab = "lunch";
+function renderMenu(){
+  document.getElementById("tabs").innerHTML = MENU.map(c =>
+    `<button role="tab" data-tab="${c.id}" class="${c.id===tab?"on":""}" aria-selected="${c.id===tab}">${c.label[lang]}</button>`).join("");
+  const c = MENU.find(x => x.id === tab);
+  document.getElementById("menuIntro").textContent = c.intro[lang];
+  document.getElementById("menuAcc").innerHTML = c.sections.map((s, i) => `
+        <details class="msec ${s.featured ? "featured" : ""}" data-k="${c.id}:${i}" ${OPEN.has(c.id + ":" + i) ? "open" : ""}>
+          <summary><h3>${s.t[lang]}</h3>${s.featured ? `<span class="flame">${T[lang].signature}</span>` : ""}<span class="snote">${s.note ? s.note[lang] : ""}</span><span class="chev" aria-hidden="true"></span></summary>
+          ${s.groups
+            ? `<div class="msec-body multi">${s.groups.map(g => `<div class="sub"><h4>${g.t[lang]}</h4>${g.note ? `<div class="gnote">${g.note[lang]}</div>` : ""}${colsHTML(g.cols)}${listHTML(g.items)}</div>`).join("")}</div>`
+            : `<div class="msec-body">${colsHTML(s.cols)}${listHTML(s.items)}</div>`}
+        </details>`).join("");
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-tab]"); if (!b) return;
+  tab = b.dataset.tab; renderMenu();
+  b.scrollIntoView && document.querySelector(`[data-tab="${tab}"]`).scrollIntoView({block:"nearest",inline:"center"});
+});
+document.addEventListener("toggle", e => {
+  const d = e.target; if (!d.dataset || !d.dataset.k) return;
+  d.open ? OPEN.add(d.dataset.k) : OPEN.delete(d.dataset.k);
+}, true);
+
+function applyLang(){
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => el.placeholder = t[el.dataset.i18nPh]);
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === lang));
+  renderMenu(); renderHours(); renderStatus();
+  const m = document.getElementById("evMail"); if (m) m.href = "mailto:info@cafeliva.nl?subject=" + encodeURIComponent(t.ev_subject);
+}
+
+/* Reservations: every .js-book button carries data-zc-action="open", so the Zenchef SDK
+   (pasted at the very end of <body>) opens its booking popup. Until the SDK has loaded,
+   a small popup with phone and e-mail is shown instead. */
+const topLevel = (() => { try { return window.self === window.top; } catch(e) { return false; } })();
+document.addEventListener("click", e => {
+  const b = e.target.closest(".js-book"); if (!b) return;
+  if (!window.ZenchefWidget) { e.preventDefault(); document.getElementById("bk").showModal(); }
+});
+if (topLevel) {
+  document.getElementById("map").innerHTML = '<iframe title="Map" loading="lazy" src="https://www.google.com/maps?q=Mercatorplein+2b,+1057+CB+Amsterdam&output=embed"></iframe>';
+}
+
+/* events */
+document.addEventListener("click", e => {
+  const lb = e.target.closest("[data-lang]"); if (lb) { lang = lb.dataset.lang; applyLang(); }
+  if (e.target.closest(".burger")) document.body.classList.toggle("menu-open");
+  if (e.target.closest("#navlinks a")) document.body.classList.remove("menu-open");
+});
+const header = document.getElementById("top");
+const onScroll = () => header.classList.toggle("solid", window.scrollY > 40);
+window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), {threshold:.12});
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+applyLang();
+setInterval(renderStatus, 60000);
+</script>
+<!-- Zenchef Widget SDK -->
+<script>;(function (d, s, id) {const el = d.getElementsByTagName(s)[0]; if (d.getElementById(id) || el.parentNode == null) {return;} var js = d.createElement(s);  js.id = id; js.async = true; js.src = 'https://sdk.zenchef.com/v1/sdk.min.js';  el.parentNode.insertBefore(js, el); })(document, 'script', 'zenchef-sdk')</script>
+<div
+   class="zc-widget-config"
+   data-restaurant="381407"
+   data-open="2000"></div>
+</body>
+</html>
